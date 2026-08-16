@@ -1,0 +1,35 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.forest {
+  background: rgba(53, 79, 59, 0.12);
+  color: var(--color-forest);
+}
+
+.mustard {
+  background: rgba(216, 163, 61, 0.2);
+  color: var(--color-mustard-dark);
+}
+
+.rose {
+  background: rgba(201, 130, 116, 0.18);
+  color: var(--color-dusty-rose);
+}
+
+.orange {
+  background: rgba(199, 101, 58, 0.15);
+  color: var(--color-burnt-orange-dark);
+}
+
+.neutral {
+  background: rgba(52, 37, 29, 0.08);
+  color: var(--color-text-muted);
+}

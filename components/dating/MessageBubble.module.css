@@ -1,0 +1,55 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--space-3);
+}
+
+.rowMe {
+  justify-content: flex-end;
+}
+
+.bubble {
+  max-width: 75%;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bubbleThem {
+  background: var(--color-cream-soft);
+  color: var(--color-text);
+  border-bottom-left-radius: 4px;
+}
+
+.bubbleMe {
+  background: var(--color-forest);
+  color: var(--color-cream-soft);
+  border-bottom-right-radius: 4px;
+}
+
+.text {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.image {
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.meta {
+  font-size: 0.7rem;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  align-self: flex-end;
+}
+
+.receipt {
+  display: inline-flex;
+}

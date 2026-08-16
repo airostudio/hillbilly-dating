@@ -1,0 +1,97 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-dark-brown);
+  box-shadow: var(--shadow-card);
+}
+
+.image {
+  object-fit: cover;
+  animation: fadeIn 0.2s ease both;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(52, 37, 29, 0.55);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav:hover {
+  background: rgba(52, 37, 29, 0.8);
+}
+
+.navLeft {
+  left: var(--space-3);
+}
+
+.navRight {
+  right: var(--space-3);
+}
+
+.dots {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  right: var(--space-3);
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  flex: 1;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: white;
+}
+
+.thumbs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.thumb {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+}
+
+.thumbActive {
+  border-color: var(--color-primary);
+}
+
+.thumbImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
