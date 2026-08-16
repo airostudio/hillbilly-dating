@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import { Rye, Mulish } from "next/font/google";
+import "@fontsource/rye/400.css";
+import "@fontsource/mulish/400.css";
+import "@fontsource/mulish/500.css";
+import "@fontsource/mulish/600.css";
+import "@fontsource/mulish/700.css";
+import "@fontsource/mulish/800.css";
 import { ToastProvider } from "@/components/ui/Toast";
 import { DemoStoreProvider } from "@/lib/demo-store";
 import "./globals.css";
-
-const rye = Rye({
-  variable: "--font-rye",
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const mulish = Mulish({
-  variable: "--font-mulish",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"),
@@ -42,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${rye.variable} ${mulish.variable}`}>
+    <html lang="en">
       <body>
         <DemoStoreProvider>
           <ToastProvider>{children}</ToastProvider>

@@ -115,6 +115,9 @@ export function DemoStoreProvider({ children }: { children: ReactNode }) {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    // Reading localStorage must happen post-mount to avoid an SSR hydration
+    // mismatch (the server always renders defaultState()).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setState(loadState());
     setHydrated(true);
   }, []);

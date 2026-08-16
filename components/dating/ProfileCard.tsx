@@ -23,18 +23,25 @@ export function ProfileCard({
   viewProfileHref,
 }: ProfileCardProps) {
   const prompt = profile.prompts[0];
+  const primaryPhoto = profile.photos[0];
 
   return (
     <div>
       <div className={styles.card}>
         <div className={styles.photo}>
-          <Image
-            src={profile.photos[0]}
-            alt={`${profile.firstName}'s primary photo`}
-            fill
-            sizes="(max-width: 640px) 100vw, 420px"
-            priority
-          />
+          {primaryPhoto ? (
+            <Image
+              src={primaryPhoto}
+              alt={`${profile.firstName}'s primary photo`}
+              fill
+              sizes="(max-width: 640px) 100vw, 420px"
+              priority
+            />
+          ) : (
+            <div className={styles.photoPlaceholder} aria-hidden="true">
+              {profile.firstName.charAt(0).toUpperCase()}
+            </div>
+          )}
         </div>
         <div className={styles.scrim} aria-hidden="true" />
         {viewProfileHref && (

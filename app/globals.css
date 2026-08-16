@@ -39,9 +39,9 @@
 
   --color-focus-ring: #b9852a;
 
-  /* Typography */
-  --font-display: var(--font-rye), "Georgia", serif;
-  --font-body: var(--font-mulish), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography (self-hosted via @fontsource, see app/layout.tsx) */
+  --font-display: "Rye", Georgia, serif;
+  --font-body: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Spacing scale */
   --space-1: 0.25rem;
