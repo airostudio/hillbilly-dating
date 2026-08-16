@@ -11,7 +11,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { DEMO_PROFILES, DEMO_TESTIMONIALS, LANDING_CATEGORIES } from "@/lib/demo-data";
+import { HeroIllustration } from "@/components/dating/HeroIllustration";
+import { DEMO_TESTIMONIALS, LANDING_CATEGORIES } from "@/lib/demo-data";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -44,44 +45,37 @@ const STEPS = [
   { icon: MessageCircle, title: "Start talking" },
 ];
 
-const HERO_CARDS = DEMO_PROFILES.slice(0, 3);
-
 export default function LandingPage() {
   return (
     <>
       <section className={styles.hero}>
+        <div className={styles.heroArt}>
+          <HeroIllustration />
+          <div className={styles.heroArtScrim} aria-hidden="true" />
+        </div>
         <div className={`container ${styles.heroInner}`}>
           <div className={styles.heroCopy}>
-            <h1>Find your forever porch partner.</h1>
+            <p className={styles.eyebrow}>Country hearts. Real connections.</p>
+            <h1 className={styles.heroHeadline}>
+              Find your
+              <br />
+              forever porch
+              <br />
+              partner.
+            </h1>
             <p className={styles.heroSub}>
               Meet country-loving singles who&rsquo;d rather watch a sunset from the tailgate
-              than swipe all night.
+              than swipe all night. Somewhere out there, somebody&rsquo;s saving you a spot
+              next to them.
             </p>
             <div className={styles.heroActions}>
               <Button href="/signup" size="lg">
                 Start Meeting Folks
               </Button>
-              <Button href="#how-it-works" variant="outline" size="lg">
+              <Button href="#how-it-works" variant="secondary" size="lg">
                 See How It Works
               </Button>
             </div>
-          </div>
-          <div className={styles.heroArt} aria-hidden="true">
-            {HERO_CARDS.map((profile, i) => (
-              <div key={profile.id} className={styles.heroCard} style={{ zIndex: i }}>
-                <Image
-                  src={profile.photos[0]}
-                  alt=""
-                  width={260}
-                  height={340}
-                  className={styles.heroCardImage}
-                />
-                <div className={styles.heroCardLabel}>
-                  <strong>{profile.firstName}</strong>, {profile.age}
-                  <span>{profile.city}, {profile.state}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

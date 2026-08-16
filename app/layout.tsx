@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@fontsource/rye/400.css";
+import "@fontsource/sancreek/400.css";
 import "@fontsource/mulish/400.css";
 import "@fontsource/mulish/500.css";
 import "@fontsource/mulish/600.css";

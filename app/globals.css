@@ -41,6 +41,7 @@
 
   /* Typography (self-hosted via @fontsource, see app/layout.tsx) */
   --font-display: "Rye", Georgia, serif;
+  --font-hero: "Sancreek", "Rye", Georgia, serif;
   --font-body: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Spacing scale */

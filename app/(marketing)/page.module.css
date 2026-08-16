@@ -1,87 +1,81 @@
 .hero {
-  padding-block: var(--space-9) var(--space-10);
-  background:
-    radial-gradient(circle at 85% 20%, rgba(216, 163, 61, 0.25), transparent 55%),
-    radial-gradient(circle at 10% 80%, rgba(53, 79, 59, 0.15), transparent 50%);
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #8c4a3e;
 }
 
-.heroInner {
-  display: grid;
-  gap: var(--space-8);
-  align-items: center;
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 960px) {
-  .heroInner {
-    grid-template-columns: 1.1fr 0.9fr;
+@media (min-height: 900px) {
+  .hero {
+    min-height: 780px;
   }
 }
 
-.heroCopy h1 {
-  max-width: 14ch;
+.heroArt {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroArt svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.heroArtScrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(24, 16, 12, 0.92) 0%, rgba(24, 16, 12, 0.62) 34%, rgba(24, 16, 12, 0.1) 64%, transparent 85%),
+    linear-gradient(0deg, rgba(24, 16, 12, 0.55) 0%, rgba(24, 16, 12, 0.05) 45%, rgba(24, 16, 12, 0) 65%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-block: var(--space-9) var(--space-10);
+}
+
+.heroCopy {
+  max-width: 620px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--color-mustard);
+  margin: 0 0 var(--space-3);
+}
+
+.heroHeadline {
+  font-family: var(--font-hero);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 4vw + 1.75rem, 5.5rem);
+  line-height: 0.94;
+  letter-spacing: 0.01em;
+  color: var(--color-cream-soft);
+  text-shadow: 0 6px 28px rgba(15, 9, 6, 0.55);
+  margin: 0 0 var(--space-5);
 }
 
 .heroSub {
   font-size: 1.15rem;
-  color: var(--color-text-muted);
+  color: rgba(247, 240, 223, 0.92);
   max-width: 46ch;
   margin-bottom: var(--space-6);
+  text-shadow: 0 2px 12px rgba(15, 9, 6, 0.4);
 }
 
 .heroActions {
   display: flex;
   gap: var(--space-3);
   flex-wrap: wrap;
-}
-
-.heroArt {
-  position: relative;
-  height: 380px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroCard {
-  position: absolute;
-  width: 220px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  background: var(--color-dark-brown);
-  border: 4px solid var(--color-surface);
-}
-
-.heroCard:nth-child(1) {
-  transform: rotate(-8deg) translate(-70px, 10px);
-}
-
-.heroCard:nth-child(2) {
-  transform: rotate(3deg) translate(40px, -20px);
-}
-
-.heroCard:nth-child(3) {
-  transform: rotate(12deg) translate(110px, 40px);
-}
-
-.heroCardImage {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.heroCardLabel {
-  padding: var(--space-2) var(--space-3);
-  color: var(--color-cream-soft);
-  font-size: 0.85rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.heroCardLabel span {
-  color: rgba(247, 240, 223, 0.7);
-  font-size: 0.75rem;
 }
 
 .section {
@@ -235,4 +229,46 @@
   max-width: 20ch;
   margin-inline: auto;
   margin-bottom: var(--space-6);
+}
+
+@media (max-width: 720px) {
+  /* Full-bleed text-over-image fights itself at narrow widths — either the
+     couple disappears under a scrim, or the copy loses contrast. Stack
+     instead: illustration banner on top, copy below on solid cream. */
+  .hero {
+    position: static;
+    min-height: 0;
+    display: block;
+    background: var(--color-bg);
+  }
+
+  .heroArt {
+    position: relative;
+    inset: auto;
+    height: 62vw;
+    min-height: 280px;
+    max-height: 420px;
+  }
+
+  .heroArtScrim {
+    background: linear-gradient(0deg, rgba(20, 13, 10, 0.45) 0%, rgba(20, 13, 10, 0) 40%);
+  }
+
+  .heroInner {
+    padding-block: var(--space-7) var(--space-8);
+  }
+
+  .heroHeadline {
+    color: var(--color-dark-brown);
+    text-shadow: none;
+  }
+
+  .heroSub {
+    color: var(--color-text-muted);
+    text-shadow: none;
+  }
+
+  .eyebrow {
+    color: var(--color-mustard-dark);
+  }
 }
