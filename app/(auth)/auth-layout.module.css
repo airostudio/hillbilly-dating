@@ -1,0 +1,85 @@
+.shell {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-cream);
+  overflow: hidden;
+}
+
+.glowTop,
+.glowBottom {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glowTop {
+  top: -12%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  max-width: 520px;
+  max-height: 520px;
+  background: radial-gradient(circle, rgba(53, 79, 59, 0.22), transparent 70%);
+}
+
+.glowBottom {
+  bottom: -16%;
+  right: -12%;
+  width: 55vw;
+  height: 55vw;
+  max-width: 480px;
+  max-height: 480px;
+  background: radial-gradient(circle, rgba(199, 101, 58, 0.18), transparent 70%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-dark-brown);
+}
+
+.logoMark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--color-forest);
+  color: var(--color-cream-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.card {
+  width: 100%;
+  padding: var(--space-6) var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: var(--space-7) var(--space-6);
+  }
+}

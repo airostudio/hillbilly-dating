@@ -1,0 +1,239 @@
+.page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.layout {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* ---------------- Filters sidebar (desktop) ---------------- */
+
+.filters {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: sticky;
+  top: var(--space-5);
+}
+
+.filtersHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text);
+}
+
+.filtersTitle {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filterLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.rangeRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.queue {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.queueHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.queueList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.queueItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.queueThumb {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-surface-alt);
+}
+
+.queueName {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* ---------------- Desktop card ---------------- */
+
+.cardWrap {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ---------------- Loading ---------------- */
+
+.loading {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-8);
+}
+
+.skeletonCard {
+  width: 100%;
+  height: 560px;
+  border-radius: var(--radius-lg);
+}
+
+.loadingText {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ---------------- Mobile full-screen card ---------------- */
+
+.mobileCard {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 220px);
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.mobilePhoto {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-surface-alt);
+}
+
+.mobileScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.05) 45%, transparent 70%);
+}
+
+.mobileViewProfile {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+
+.mobileViewProfile:hover,
+.mobileViewProfile:focus-visible {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.mobileInfo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-5);
+  color: #fff;
+}
+
+.mobileName {
+  font-size: 1.6rem;
+  margin: 0 0 var(--space-1);
+  color: #fff;
+}
+
+.mobileMeta {
+  margin: 0 0 var(--space-2);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.mobileBio {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mobileActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  background: var(--color-surface);
+}
+
+@media (min-width: 900px) {
+  .mobileActions {
+    display: none;
+  }
+}

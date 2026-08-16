@@ -1,0 +1,109 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  margin-bottom: var(--space-1);
+}
+
+.subhead {
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-5);
+}
+
+.demoNote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.demoNote svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-forest);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.passwordField {
+  position: relative;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 34px;
+  right: var(--space-3);
+  background: none;
+  border: none;
+  padding: var(--space-1);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+}
+
+.togglePassword:hover {
+  color: var(--color-text);
+}
+
+.forgotRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.forgotLink {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-forest);
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  margin: var(--space-1) 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.footerText {
+  text-align: center;
+  margin: var(--space-5) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.footerLink {
+  font-weight: 700;
+  color: var(--color-forest);
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
