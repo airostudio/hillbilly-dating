@@ -34,7 +34,6 @@ export function ThreadView({ matchId }: ThreadViewProps) {
     const el = listRef.current;
     if (!el) return;
     el.scrollTo({ top: el.scrollHeight });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages.length]);
 
   if (!profile) return null;

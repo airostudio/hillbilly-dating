@@ -232,7 +232,7 @@ export function SettingsView() {
               <div>
                 <p className={styles.rowLabel}>Delete account</p>
                 <p className={styles.rowHint}>
-                  Permanently delete your profile and all your data. This can't be undone.
+                  Permanently delete your profile and all your data. This can&apos;t be undone.
                 </p>
               </div>
               <Button type="button" variant="danger" onClick={() => setDeleteDialogOpen(true)}>

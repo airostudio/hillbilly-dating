@@ -1,0 +1,60 @@
+.page {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-9);
+  max-width: 720px;
+}
+
+.title {
+  margin: 0 0 var(--space-2);
+}
+
+.subtitle {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hint {
+  margin: calc(var(--space-2) * -1) 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .fieldGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-start;
+}
